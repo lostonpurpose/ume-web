@@ -46,7 +46,7 @@ const Form = () => {
         >
           First Name
         </label>
-        <input 
+        <input required
           type="text" 
           id="fname" 
           name="fname" // This matches the key in formData
@@ -64,13 +64,13 @@ const Form = () => {
         >
           Last Name
         </label>
-        <input 
+        <input required
           type="text" 
           id="lname" 
           name="lname" // This matches the key in formData
           value={formData.lname} // Controlled input
           onChange={handleChange} // Updates formData
-          className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+          className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" 
         />
       </div>
 
@@ -83,14 +83,14 @@ const Form = () => {
           Please tell us about your issue.
         </label>
 
-        <textarea id="w3review" name="w3review" rows="4" cols="50"
+        <textarea required
         id="lname" 
         name="description" // This matches the key in formData
         value={formData.description} // Controlled input
         onChange={handleChange} // Updates formData
         className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
         >
-          Type here.
+        
         </textarea>
       </div>
 
